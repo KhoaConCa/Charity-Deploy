@@ -31,10 +31,7 @@ services:
   # REGION: Frontend Configuration
   nginx:
     container_name: nginx
-    image: charity-nginx:1.0
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
+    image: richyotd/charity-nginx:1.0
     ports:
       - "80:80"
     networks:
@@ -55,14 +52,9 @@ services:
   # REGION: Backend Services Configuration
   identity-service:
     container_name: identity-service
-    image: charity-identity:1.0
-    build:
-      context: ../LocalBE/Charity/identityService
-      dockerfile: Dockerfile
+    image: richyotd/charity-identity:1.0
     expose:
       - "8080"
-    env_file:
-      - ../LocalBE/Charity/identityService/.env
     networks:
       - backend
       - database
