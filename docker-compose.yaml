@@ -19,10 +19,15 @@ networks:
 # REGION: Volumes Configuration
 volumes:
   neo4j-data:
+    name: neo4j-data
   mysql-data:
+    name: mysql-data
   mongodb-data:
+    name: mongodb-data
   postgres-data:
+    name: postgres-data
   redis-data:
+    name: redis-data
 # ENDREGION
 # ===============================
 
@@ -31,10 +36,7 @@ services:
   # REGION: Frontend Configuration
   nginx:
     container_name: nginx
-    image: charity-nginx:1.2
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
+    image: richyotd/charity-nginx:1.2
     ports:
       - "80:80"
       - "443:443"
