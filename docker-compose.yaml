@@ -58,7 +58,7 @@ services:
   # REGION: Backend Services Configuration
   identity-service:
     container_name: identity-service
-    image: richyotd/charity-identity:1.0
+    image: richyotd/charity-identity:1.1
     expose:
       - "8080"
     networks:
