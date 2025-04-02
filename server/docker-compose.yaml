@@ -36,7 +36,7 @@ services:
   # REGION: Frontend Configuration
   nginx:
     container_name: nginx
-    image: richyotd/charity-nginx:1.4
+    image: richyotd/charity-nginx:1.5
     ports:
       - "80:80"
       - "443:443"
